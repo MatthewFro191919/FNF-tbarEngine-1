@@ -85,6 +85,25 @@
       "dir": null,
       "ref": "master",
       "url": "https://github.com/nebulazorua/linc_luajit"
+    },
+    {
+      "name": "away3d",
+      "type": "haxelib",
+      "version": null
+    },
+    {
+      "name": "hscript-improved",
+      "type": "git",
+      "dir": null,
+      "ref": "master",
+      "url": "https://github.com/FNF-CNE-Devs/hscript-improved"
+    },
+    {
+      "name": "hxdiscord_rpc",
+      "type": "git",
+      "dir": null,
+      "ref": "master",
+      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
     }
   ]
 }
