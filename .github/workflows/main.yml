@@ -56,7 +56,6 @@ jobs:
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
           haxelib git hxdiscord_rpc https://github.com/MAJigsaw77/hxdiscord_rpc.git
           haxelib git hscript-improved https://github.com/FNF-CNE-Devs/hscript-improved.git
-          haxelib run hmm install
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
@@ -66,6 +65,10 @@ jobs:
         with:
           name: linuxBuild
           path: 'export/release/linux/bin'
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.9
+        with:
+         name: linuxBuild
   buildWindows:
     runs-on: windows-latest
 
@@ -112,6 +115,10 @@ jobs:
         with:
           name: windowsBuild
           path: export/release/windows/bin
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.9
+        with:
+         name: windowsBuild
   buildMac:
     runs-on: macos-latest
 
@@ -157,4 +164,8 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: macBuild
-          path: export/release/macos/bin
+          path: export/release/macos/bin 
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.9
+        with:
+         name: macBuild
